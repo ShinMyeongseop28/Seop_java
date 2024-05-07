@@ -28,6 +28,7 @@ public class HomeworkEx01 {
 			range = "청소년";
 //			System.out.printf("%d세는 청소년입니다.", age);
 		}
+		//else if (age >= 19)
 		else {
 			range = "성인";
 //			System.out.printf("%d세는 성인입니다.", age);
