@@ -15,24 +15,24 @@ public class HomeworkEx01 {
 		System.out.println("당신의 나이는?");
 		int age;
 		age = scan.nextInt();
-//		String old = age < 6 ? "유아" :
-//			(age < 12 ? "소아" : (age < 19 ? "청소년" : "성인"));
+		String range;
 		if (age < 6) {
-//			System.out.printf("%s입니다.", old);
-			System.out.println("유아입니다.");
+			range = "유아";
+//			System.out.printf("%d세는 유아입니다.", age);
 		}
 		else if (age < 12) {
-//			System.out.printf("%s입니다.", old);
-			System.out.println("소아입니다.");
+			range = "소아";
+//			System.out.printf("%d세는 소아입니다.", age);
 		}
 		else if (age < 19) {
-//			System.out.printf("%s입니다.", old);
-			System.out.println("청소년입니다.");
+			range = "청소년";
+//			System.out.printf("%d세는 청소년입니다.", age);
 		}
 		else {
-//			System.out.printf("%s입니다.", old);
-			System.out.println("성인입니다.");
+			range = "성인";
+//			System.out.printf("%d세는 성인입니다.", age);
 		}
+		System.out.printf("%d세는 %s", age, range);
 		
 	}
 
