@@ -5,7 +5,7 @@ public class IfYut {
 	public static void main(String[] args) {
 		//윷을 던져 그 결과를 출력하기
 		//앞: 0, 뒤: 1
-		//도:앞뒤뒤뒤뒤-3 개:앞앞뒤뒤-2 걸:앞앞앞뒤-1 윷:앞앞앞앞-0 모:뒤뒤뒤뒤-4
+		//도:앞뒤뒤뒤-3 개:앞앞뒤뒤-2 걸:앞앞앞뒤-1 윷:앞앞앞앞-0 모:뒤뒤뒤뒤-4
 		Random r = new Random();
 		int bar1 = r.nextInt(2); //0~1 두 수 중 랜덤 추출
 		int bar2 = r.nextInt(2); //0~1 두 수 중 랜덤 추출
