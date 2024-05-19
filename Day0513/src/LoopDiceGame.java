@@ -39,13 +39,14 @@ public class LoopDiceGame {
 					System.out.println("박문수 한번 더!");
 				}
 			}while(dice1==dice2);
+			
 			//홍길동/박문수의 최종위치가 50이상이면 게임끝, 둘 다 50이상이 되면 무승부
 			if(hong>=50 && park>=50) {
 				System.out.println("무승부");
 				break;
 			}else if(hong>=50 || park>=50) {
 				System.out.println("게임끝: "
-						+ (hong>=50 ? "홍길동" : "박문수"));
+						+ (hong>=50 ? "홍길동 승" : "박문수 승"));
 				break;
 			}
 			
