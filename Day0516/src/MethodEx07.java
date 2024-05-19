@@ -2,15 +2,15 @@
 public class MethodEx07 {
 
 	public static void main(String[] args) {
-		//체질량 지수(BMI: 성인 대상) = 체중(kg) / 신장(m) 제곱
+		//체질량 지수(BMI: 성인 대상) = 체중(kg) / 신장(m)²
 		//1. 18.5 이하 : 저체중
 		//2. 18.5~23 : 정상 
 		//3. 23~25 : 과체중 
 		//4. 25~30 : 비만 
 		//5. 30이상 : 고도비만
 		
-		double height = 165.5, weight = 48.3;
 		//홍길동씨의 키, 체중 정보
+		double height = 165.5, weight = 48.3;
 		double bmi = bmi(height, weight);
 		System.out.printf("홍길동[키:%.1f, 체중:%.1f]의 지수: %.1f\n",
 				height, weight, bmi);
@@ -18,7 +18,7 @@ public class MethodEx07 {
 		
 		//심청씨의 키, 체중 정보
 		height = 184.5; 
-		weight = 62.3;
+		weight = 76.3;
 		bmi = bmi(height, weight);
 		System.out.printf("심청[키:%.1f, 체중:%.1f]의 지수: %.1f\n",
 				height, weight, bmi);
@@ -37,16 +37,16 @@ public class MethodEx07 {
 			name = "정상";
 		}else if(23 < bmi && bmi <= 25) {
 			name = "과체중";
-		}else (25 < bmi && bmi <= 30) {
+		}else if(25 < bmi && bmi <= 30) {
 			name = "비만";			
 		}else {
 			name = "고도비만";
 		}
-		retrun name;
+		return name;
 	}
 	
 	
-	static void bmi(double h, double w) {
+	static double bmi(double h, double w) {
 		h *= 0.01;
 		double bmi = w / (h * h);
 		return bmi;
