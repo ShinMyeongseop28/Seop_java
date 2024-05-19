@@ -30,10 +30,11 @@ public class MethodEx04 {
 	
 
 	public static void main(String[] args) {
-		int no = 13;
-		System.out.printf("%d는 %s\n", no, multiply(no));
-		System.out.printf("%d는 %d\n", no, multiply2(no));
-		System.out.printf("%d는 %d\n", no, multiply3(no));
+		int no = 18;
+		System.out.printf("%d은(는) %s\n", no, multiply(no));
+		System.out.printf("%d의 나머지는 %d입니다.\n", no, multiply2(no));
+		System.out.printf("%d은(는) %b입니다.\n", no, multiply3(no));
+		
 	
 	}
 

@@ -20,7 +20,7 @@ public class MethodEx01 {
 	}
 	
 	//메소드 오버로딩: 똑같은 이름의 메소드를 파라미터의 갯수를 다르게 하거나
-	//                             파라미터의 데이터타입을 다르게하여 선언하는 것
+	//                 파라미터의 데이터타입을 다르게하여 선언하는 것
 	
 	//지정한 기호를 지정한 갯수만큼 출력하는 메소드
 	static void printSymbol(int no, String symbol) {
@@ -48,14 +48,14 @@ public class MethodEx01 {
 	//지정한 갯수만큼 별을 출력하는 메소드
 	static void printSymbol(int no) {
 		for(int i=1; i<=no; i++) {
-			System.out.println("*");
+			System.out.print("*");
 		}
 		System.out.println();
 	}
 	
 	//별을 13개 출력하는 메소드
 	static void printSymbol() {
-//		System.out.println("*************"); //별 13개 출력
+		//System.out.println("*************"); //별 13개 출력
 		for(int i=1; i<=13; i++) {
 			System.out.print("*");
 		}

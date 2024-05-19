@@ -8,12 +8,13 @@ public class MethodEx03 {
 			result = "짝수";
 			break;
 		
-		default:
 		//case 1:
+		default:
 			result = "홀수";
 			break;
 		}
 		return result;
+
 //		if(no % 2 == 0) {
 //			//System.out.println("짝수");
 //			result = "짝수";
@@ -29,22 +30,23 @@ public class MethodEx03 {
 	
 	public static void main(String[] args) {
 		//화면이라고 생각하자
-		int no = 3;
+		int no = 5;
 		String result = oddEven(no);
-		if(no % 2 == 0) {
-			System.out.println("짝수");			
-		}else if(no % 2 == 1) {
-			System.out.println("홀수");
-		}
+		System.out.println(no + ": " + result);
+//		if(no % 2 == 0) {
+//			System.out.println("짝수");			
+//		}else if(no % 2 == 1) {
+//			System.out.println("홀수");
+//		}
 
-		no = 6;
-		oddEven(no);
-		if(no % 2 == 0) {
-			System.out.println("짝수");			
-		}else if(no % 2 == 1) {
-			System.out.println("홀수");
-		}
-		
+		no = 8;
+		result = oddEven(no);
+		System.out.println(no + ": " + result);
+//		if(no % 2 == 0) {
+//			System.out.println("짝수");			
+//		}else if(no % 2 == 1) {
+//			System.out.println("홀수");
+//		}
 		
 	}
 
