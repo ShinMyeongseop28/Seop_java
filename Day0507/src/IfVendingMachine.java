@@ -17,30 +17,34 @@ public class IfVendingMachine {
 		Scanner scan = new Scanner(System.in);
 		int money = scan.nextInt();
 		System.out.println("투입금액: " + money);
+		
 		//투입금액에 따라 선택할 수 있는 음료에 선택가능 램프가 켜지도록하기
 		boolean bcoke = false, bletsbe = false, bcoco = false;
-		if(money >= coke) {
-			bcoke = true;
-			bletsbe = true;
-			bcoco = true;
-		}
-		if(money >= coco) {
-			bletsbe = true;
-			bcoco = true;
-		}
-		if(money >= letsbe) {
-			bletsbe = true;
-		}
+		
+//		if(money >= coke) {
+//			bcoke = true;
+//			bletsbe = true;
+//			bcoco = true;
+//		}
+//		if(money >= coco) {
+//			bletsbe = true;
+//			bcoco = true;
+//		}
+//		if(money >= letsbe) {
+//			bletsbe = true;
+// 		}
+		
 		if(money >= letsbe)	bletsbe = true;
 		if(money >= coco)	bcoco = true;
 		if(money >= coke)	bcoke = true;
 		//선택가능 메뉴에 불켜짐 표현하기
-		System.out.printf( "1.콜라: %d원 [%s]\n"
-				, coke, bcoke ? "ON" : "OFF" );
-		System.out.printf( "2.레쓰비: %d원 [%s]\n"
-				, letsbe, bletsbe ? "ON" : "OFF" );
-		System.out.printf( "3.코코팜: %d원 [%s]\n"
-				, coco, bcoco ? "ON" : "OFF" );
+		System.out.printf( "1.콜라: %d원 [%s]\n",
+				coke, bcoke ? "ON" : "OFF" );
+		System.out.printf( "2.레쓰비: %d원 [%s]\n",
+				letsbe, bletsbe ? "ON" : "OFF" );
+		System.out.printf( "3.코코팜: %d원 [%s]\n",
+				coco, bcoco ? "ON" : "OFF" );
+		
 		//메뉴 선택
 		System.out.println("음료를 선택하세요");
 		//선택한 메뉴에 따른 거스름돈 계산하기
@@ -62,6 +66,7 @@ public class IfVendingMachine {
 //			change = money;
 //		}
 		System.out.printf("거스름돈: %d\n", change);
+		
 		//제품이 나오고, 거스름돈이 나온다
 		//1000원짜리 몇개
 		//500원짜리 몇개
@@ -69,20 +74,20 @@ public class IfVendingMachine {
 		//50원짜리 몇개
 		if(change > 0) { //거스름돈이 있는 경우만 처리
 			int c1000=0, c500=0, c100=0, c50=0;
-			c1000=change/1000; //3000 - 1250 -> 1000 1개 500 1개 100 2개 50 1개
+			c1000 = change / 1000; //3000 - 1250 -> 1000 1개 500 1개 100 2개 50 1개
 			if( c1000 > 0 ) System.out.printf( "1000원 %d장\n", c1000);
 			
 			change %= 1000; //change = change % 1000; //750
 			c500 = change / 500;
-			if(c500 >0) System.out.printf("500원 %d개\n", c500);
+			if(c500 > 0) System.out.printf("500원 %d개\n", c500);
 			
 			change %= 500; //250
 			c100 = change / 100;
-			if(c100 >0) System.out.printf("100원 %d개\n", c100);
+			if(c100 > 0) System.out.printf("100원 %d개\n", c100);
 			
 			change %= 100; //50
-			c100 = change / 50;
-			if(c50 >0) System.out.printf("50원 %d개\n", c50);
+			c50 = change / 50;
+			if(c50 > 0) System.out.printf("50원 %d개\n", c50);
 		}
 	}
 
