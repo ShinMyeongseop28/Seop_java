@@ -4,69 +4,71 @@ public class MethodEx08 {
 	public static void main(String[] args) {
 		//학생들의 3과목 성적에 대한 평균과 학점 출력하기
 		int kang[] = {80 , 98, 68};
-		int kim[] = {95 , 82, 78};
+		int[] kim = {95 , 82, 78};
 		int park[] = {75 , 68, 95};
-		int shin[] = {95 , 84, 67};
+		int[] shin = {77 , 82, 64};
 		
-		System.out.printf("강씨의 평균: %.1f \n ", average(kang) );
-		grade(average(kang));
-		System.out.printf("김씨의 평균: %.1f \n", average(kim));
-		grade(average(kim));
-		System.out.printf("박씨의 평균: %.1f \n", average(park));
-		grade(average(park));
-		System.out.printf("신씨의 평균: %.1f \n", average(shin));
-		grade(average(shin));
-//		System.out.printf("강씨의 평균: %.1f %c학점\n ", average(kang), 
-//				grade(average(kang)));
-//		System.out.printf("김씨의 평균: %.1f %c학점\n", average(kim), 
-//				grade(average(kim)));
-//		System.out.printf("박씨의 평균: %.1f %c학점\n", average(park), 
-//				grade(average(park)));
-//		System.out.printf("신씨의 평균: %.1f %c학점\n", average(shin), 
-//				grade(average(shin)));
+		System.out.printf("강씨의 평균: %.1f %s학점\n", average(kang), 
+				grade(average(kang)));
+		System.out.printf("김씨의 평균: %.1f %s학점\n", average(kim), 
+				grade(average(kim)));
+		System.out.printf("박씨의 평균: %.1f %s학점\n", average(park), 
+				grade(average(park)));
+		System.out.printf("신씨의 평균: %.1f %s학점\n", average(shin), 
+				grade(average(shin)));
+		
+//		System.out.printf("강씨의 평균: %.1f ", average(kang));
+//		grade(average(kang));
+//		System.out.printf("김씨의 평균: %.1f ", average(kim));
+//		grade(average(kim));
+//		System.out.printf("박씨의 평균: %.1f ", average(park));
+//		grade(average(park));
+//		System.out.printf("신씨의 평균: %.1f ", average(shin));
+//		grade(average(shin));
 	}
+
 	
 	//학점 계산 메소드
-	static void grade(double score) {
-		char grade;
+	static String grade(double score) {
+		String grade;
 		if(score >= 90) {
-			grade = 'A';
+			grade = "A";
 		}else if(score >= 80) {
-			grade = 'B';
+			grade = "B";
 		}else if(score >= 70) {
-			grade = 'C';
+			grade = "C";
 		}else if(score >= 60) {
-			grade = 'D';
+			grade = "D";
 		}else {
-			grade = 'F';			
+			grade = "F";			
 		}
-		System.out.println( grade );
+		return grade;
 	}
-	
-//	static char grade(double score) {
-//		String grade;
+
+//	static void grade(double score) {
+//		char grade;
 //		if(score >= 90) {
-//			grade = "A";
+//			grade = 'A';
 //		}else if(score >= 80) {
-//			grade = "B";
+//			grade = 'B';
 //		}else if(score >= 70) {
-//			grade = "C";
+//			grade = 'C';
 //		}else if(score >= 60) {
-//			grade = "D";
+//			grade = 'D';
 //		}else {
-//			grade = "F";			
+//			grade = 'F';			
 //		}
-//		return grade;
+//		System.out.println( grade + "학점" );
 //	}
 	
-	
+		
 	//평균 계산 메소드
 	static double average(int who[]) {
 		int sum = 0;
-		for(int idx=0; idx<who.length; idx++) {
-			sum += who[idx];
+		for(int i=0; i<who.length; i++) {
+			sum += who[i];
 		}
-		double avg = sum /(double) who.length;
+		double avg = (double) sum / who.length;
 		return avg;
 	}
 
