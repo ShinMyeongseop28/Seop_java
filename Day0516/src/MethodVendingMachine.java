@@ -2,28 +2,11 @@ import java.util.Scanner;
 
 public class MethodVendingMachine {
 
-	static int change(int change) {
-		int c1000 = 0, c500 = 0, c100 = 0, c50 = 0;
-		
-		c1000 = change / 1000; // 3000 - 1250 -> 1000 1개 500 1개 100 2개 50 1개
-		change %= 1000; // change = change % 1000; //750
-		if (c1000 > 0)
-			System.out.printf("1000원 %d장\n", c1000);	
-
-		c500 = change / 500;
-		change %= 500; // 250
-		if (c500 > 0)
-			System.out.printf("500원 %d개\n", c500);	
-		
-		c100 = change / 100;
-		change %= 100; // 50
-		if (c100 > 0)
-			System.out.printf("100원 %d개\n", c100);
-
-		c50 = change / 50;
-		change %= 50; // 50
-		if (c50 > 0)
-			System.out.printf("50원 %d개\n", c50);
+	static int calchange(int change, int unit) {		
+		int su = change / unit; // 3000 - 1250 -> 1000 1개 500 1개 100 2개 50 1개
+		change %= unit; // change = change % 1000; //750
+		if (su > 0)
+			System.out.printf("%d원 %d장\n", unit, su);	
 
 		return change;
 	}
@@ -75,7 +58,10 @@ public class MethodVendingMachine {
 		}		
 		System.out.printf("거스름돈: %d\n", change);
 		if(change > 0) { //거스름돈이 있는 경우만 처리	
-			change(change);				
+			change = calchange(change, 1000);				
+			change = calchange(change, 500);				
+			change = calchange(change, 100);				
+			change = calchange(change, 50);				
 		}
 					
 	}
