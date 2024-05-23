@@ -13,6 +13,7 @@ public class GoodsStock {
 		this(name, code);
 //		goodsName = name;
 //		goodsCode = code;
+		
 		stockAmount = amount;
 	}
 	
