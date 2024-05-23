@@ -6,8 +6,8 @@ public class Car {
 	int speed;
 	
 	//생성자
-	//Car(){
-	//}
+	Car(){
+	}
 	Car(String name, String carModel) {
 		owner = name;
 		model = carModel;

@@ -3,9 +3,13 @@ package Day0523;
 public class CarMain {
 
 	public static void main(String[] args) {
-		Car park = new Car();
-		park.owner = "박문수";
-		park.model = "K5";
+		
+//		Car park = new Car();
+//		park.owner = "박문수";
+//		park.model = "K5";
+		
+		Car park = new Car("박문수", "K3");
+		
 		System.out.printf("차주: %s 차종: %s\n", park.owner, park.model);
 		park.start();
 		park.speedUp();
@@ -20,6 +24,7 @@ public class CarMain {
 		park.speedUp();
 		System.out.println("현재 속도: " + park.speed);
 	
+		
 		park.speedDown();
 		System.out.println("현재 속도: " + park.speed);
 		
