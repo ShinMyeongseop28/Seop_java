@@ -13,21 +13,21 @@ public class BankAccount {
 	//생성자/메소드의 파라미터 변수명과 필드명이 같다면
 	//필드를 구분하기 위해 필드앞에 this 키워드를 붙인다.
 	//생성자에서 다른 생성자를 호출시 this 키워드를 붙인다.
+	//생성자호출문부터 선언한다.
 	
 	//생성자
-	Account(String owner, String accountNumber) {
+	BankAccount(String owner, String accountNumber) {
 		this.owner = owner;
 		this.accountNumber = accountNumber;
 	}
 	
-	Account(String owner, String accountNumber, ) {
-		this(owner, accountNo);
+	BankAccount(String owner, String accountNumber, int balance) {
+		this(owner, accountNumber);
 		this.balance = balance;
 	}
 	
-	int deposite(int money) {
+	void deposit(int money) {
 		balance += money;
-		return money;
 	}
 	
 	int withdraw(int money) {
