@@ -13,12 +13,14 @@ public class GoodsStockMain {
 		System.out.println("상품명: " + nike.goodsName);
 		System.out.println("상품코드: " + nike.goodsCode);
 		System.out.println("상품재고수량: " + nike.stockAmount);
+		System.out.println("-----------------");
 		
 		//50개를 입고한다
 		nike.plusStock(50);
 		System.out.println("상품명: " + nike.goodsName);
 		System.out.println("상품코드: " + nike.goodsCode);
 		System.out.println("상품재고수량: " + nike.stockAmount);
+		System.out.println("-----------------");
 		
 		//30개를 출고한다
 		int out = nike.minusStock(30);
@@ -26,6 +28,7 @@ public class GoodsStockMain {
 		System.out.println("상품코드: " + nike.goodsCode);
 		System.out.println("상품재고수량: " + nike.stockAmount);
 		System.out.println("출고수량: " + out );
+		System.out.println("-----------------");
 		
 		//아디다스 가방 상품 재고관리하기
 		GoodsStock adidas = new GoodsStock();
@@ -43,10 +46,12 @@ public class GoodsStockMain {
 				
 	}
 	
+	//상품정보출력하기
 	static void goodsInfo(GoodsStock goods) {
 		System.out.println("상품명: " + goods.goodsName);
 		System.out.println("상품코드: " + goods.goodsCode);
-		System.out.println("상품재고수량: " + goods.stockAmount);		
+		System.out.println("상품재고수량: " + goods.stockAmount);
+		System.out.println("-----------------");
 	}
 	
 	
