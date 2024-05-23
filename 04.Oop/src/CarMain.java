@@ -19,6 +19,7 @@ public class CarMain {
 		park.speedUp();
 		System.out.println("현재 속도: " + park.speed);
 	
+		
 		park.speedDown();
 		System.out.println("현재 속도: " + park.speed);
 		
@@ -32,6 +33,7 @@ public class CarMain {
 		System.out.println("현재 속도: " + park.speed);
 		
 		park.stop();
+		
 		
 		Car seop = new Car();
 		seop.owner = "신명섭";
@@ -70,10 +72,5 @@ public class CarMain {
 		}
 		System.out.println("현재 속도: " + car.speed);
 	}
-	
-	
-	
-	
-	
 
 }
