@@ -9,21 +9,21 @@ public class BankAccountMain {
 		// 5만원 입금한 후 출력
 		// 3만원 출금한 후 출력
 		BankAccount hong = new BankAccount("홍길동", "1111-222-3333");
-		
+
 		accountInfo(hong);
 
-		//며칠후: 5만원 입금한 후 출력
+		// 며칠후: 5만원 입금한 후 출력
 		hong.deposit(50000);
 		accountInfo(hong);
 
-		//며칠후: 3만원 출금한 후 출력
+		// 며칠후: 3만원 출금한 후 출력
 		try {
 			hong.withdraw(30000);
-		}catch(Exception e) {
+		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
 		accountInfo(hong);
-		
+
 		BankAccount Sim;
 		try {
 			Sim = new BankAccount("심청", "22-333-4444", 50000);
@@ -32,14 +32,13 @@ public class BankAccountMain {
 			e.getMessage();
 		}
 
-		//심청씨가 출금 -50000
+		// 심청씨가 출금 -50000
 		try {
-			Sim = new BankAccount(
-					"심청", "22-333-4444", -50000);
+			Sim = new BankAccount("심청", "22-333-4444", -50000);
 			accountInfo(Sim);
 			Sim.withdraw(-50000);
 			accountInfo(Sim);
-		}catch(Exception e) {
+		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
 
