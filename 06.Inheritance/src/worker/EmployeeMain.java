@@ -27,6 +27,16 @@ public class EmployeeMain {
 		System.out.println("근로형태: " + worker.workType);
 		System.out.println("월급여: " + df.format(worker.getMonthPay()));
 		
+		if(worker instanceof RegularEmployee) {
+			//Employee --> RegularEmployee 데이터타입변환: DownCasting
+			RegularEmployee regularEmployee = (RegularEmployee)worker;
+			System.out.println("보너스(%): " + regular.bonus);
+		}else if(worker instanceof ContractEmployee) {
+			ContractEmployee contractEmployee = (ContractEmployee)worker;
+			System.out.println("계약기간(개월): " + contract.period);
+		}else if(worker instanceof TemporaryEmployee) {
+			TemporaryEmployee
+		}
 	}
 
 }
