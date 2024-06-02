@@ -1,11 +1,11 @@
 package People;
 
 public class Person {
-	// 이름, 나이, 학번
-	String name, studentNo, WorkerNo;
+	// 이름, 나이
+	String name;
 	int age;
 
-	// 먹는
+	// 먹는다
 	void eat() {
 		System.out.println(name + " 먹는다");
 	}

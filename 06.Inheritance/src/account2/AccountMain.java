@@ -43,22 +43,24 @@ public class AccountMain {
 	}
 	
 	public static void main(String[] args) {
-		//홍길동은 기본 통장 개설
+//		final  int  no = 10; //변수 -> 상수
+//		no = 20;
 		Account hong = new Account("홍길동", "111-22-333");
+		info(hong);
 
 		
 		
 		//박문수는 체크카드 통장 개설
-		CheckCardAccount park = new CheckCardAccount("박문수", "222-33-444", "2222-3333-4444");
+		Account park = new CheckCardAccount("박문수", "222-33-444",
+				"2222-3333-4444" ,50000);
+		info(park);
 		
-		try {
-			//3만원 구매 후 결제
-			int paid = park.pay(30000, "2222-3333-4444");
-			System.out.println("잔고: " + park.balance);
-			System.out.println("영수증 결제금액: " + paid);
-		}catch(Exception e) {
-			System.out.println(e.getMessage());
-		}
+//		MinusAccount sim  
+		Account sim  
+			= new MinusAccount("심청", "333-22-4444", 1000000);
+		info(sim);
+		
+		
 	}
 
 }

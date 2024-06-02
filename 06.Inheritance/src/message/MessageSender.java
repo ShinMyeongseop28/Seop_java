@@ -13,6 +13,8 @@ abstract public class MessageSender {
 		this.senderName = senderName;
 	}
 
+	//	제목,내용,	발송자명
+	//	메시지를 발송한다
 	abstract void sendMessage(String receiver);
 
 }
