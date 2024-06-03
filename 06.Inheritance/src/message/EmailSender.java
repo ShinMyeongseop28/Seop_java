@@ -12,9 +12,9 @@ public class EmailSender extends MessageSender{
 		System.out.println("--- 이메일 발송 ---");
 		System.out.println("이메일 서버에 접속");
 		System.out.println("제목: " + title);
-		System.out.println("보내는이: " + senderName);
+		System.out.println("보내는이: " + senderName + "[" + emailAddress+ "]");
 		System.out.println("받는이: " + receiver);
-		System.out.println("내용: " + content);
+		System.out.println("이메일내용: " + content);
 		System.out.println("-----------------");
 	}
 

@@ -13,7 +13,7 @@ public class PersonMain {
 		Student hong = new Student();
 		hong.name = "홍길동";
 		hong.age = 15;
-		hong.studentNo = "240501";
+		hong. StudentNo = "240501";
 		hong.eat();
 		hong.gotoSchool();
 		hong.sleep();

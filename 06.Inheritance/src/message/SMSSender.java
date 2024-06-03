@@ -2,7 +2,7 @@ package message;
 
 public class SMSSender extends MessageSender{
 	String phone;
-	public SMSSender(String title, String content, String senderName, String phone) {
+	SMSSender(String title, String content, String senderName, String phone) {
 		super(title, content, senderName);
 		this.phone = phone;
 	}
@@ -13,7 +13,7 @@ public class SMSSender extends MessageSender{
 		System.out.println("제목: " + title);
 		System.out.println("보내는이: " + senderName + "["+ phone +"]");
 		System.out.println("받는이: " + receiver);
-		System.out.println("내용: " + content);
+		System.out.println("SMS 내용: " + content);
 		System.out.println("-----------------");
 	}
 

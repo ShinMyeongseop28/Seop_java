@@ -18,6 +18,9 @@ public class EmployeeMain {
 		employeeInfo(hong);
 		employeeInfo(park);
 		employeeInfo(sim);
+		
+		// TemporaryEmployee --> Employee
+		employeeInfo( (Employee)sim );
 	}
 	
 	static void employeeInfo(Employee worker) {
@@ -27,16 +30,23 @@ public class EmployeeMain {
 		System.out.println("근로형태: " + worker.workType);
 		System.out.println("월급여: " + df.format(worker.getMonthPay()));
 		
-		if(worker instanceof RegularEmployee) {
+		if( worker instanceof RegularEmployee ) {
 			//Employee --> RegularEmployee 데이터타입변환: DownCasting
-			RegularEmployee regularEmployee = (RegularEmployee)worker;
+			RegularEmployee regular = (RegularEmployee)worker;
 			System.out.println("보너스(%): " + regular.bonus);
-		}else if(worker instanceof ContractEmployee) {
-			ContractEmployee contractEmployee = (ContractEmployee)worker;
+			
+		}else if( worker instanceof ContractEmployee) {
+			ContractEmployee contract = (ContractEmployee)worker;
 			System.out.println("계약기간(개월): " + contract.period);
-		}else if(worker instanceof TemporaryEmployee) {
-			TemporaryEmployee
+			
+		}else if( worker instanceof TemporaryEmployee) {
+			TemporaryEmployee temp = (TemporaryEmployee)worker;
+			System.out.println("일당: " + temp.pay);
+			System.out.println("근무일수: " + temp.workDays);
 		}
+		
+		System.out.println("------------------------");
+		
 	}
 
 }
