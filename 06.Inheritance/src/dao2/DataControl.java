@@ -1,21 +1,26 @@
 package dao2;
 
 public class DataControl {
+	DataDAO dao;
 	
 	public void insert() {
-		InsetDAO dao = new insertDAO();
+		dao = new InsertDAO(); //다형성
 		dao. insert();
 	}
 	public void list() {
-		InsetDAO dao = new insertDAO();
+		dao = new ListDAO();
 		dao. insert();
 	}
 	public void info() {
-		InsetDAO dao = new insertDAO();
+		dao = new InfoDAO();
 		dao. insert();
 	}
+	public void update() {
+		dao= new UpdateDAO();
+		dao.update();
+	}
 	public void delete() {
-		InsetDAO dao = new insertDAO();
+		dao = new DeleteDAO();
 		dao. insert();
 	}
 

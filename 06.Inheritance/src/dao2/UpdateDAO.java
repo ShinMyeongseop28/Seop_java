@@ -1,6 +1,6 @@
 package dao2;
 
-public class Update implements DataDAO {
+public class UpdateDAO implements DataDAO {
 
 	@Override
 	public void insert() {
