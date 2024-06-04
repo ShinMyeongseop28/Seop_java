@@ -31,26 +31,30 @@ public class DrinkDeleteDAO extends DrinkManage implements DrinkDAO {
 	@Override
 	public void delete() {
 		System.out.println("삭제할 음료를 골라주세요.");
-		int num1 = scan.nextInt();
-		System.out.println("이름 정보를 삭제하시겠습니까? 1)예 2)아니오");
-		int no1 = scan.nextInt();
-		if(no1==1) {
-			System.out.println("이름 정보를 삭제합니다.");
-			drinks[num1-1].name = null;
-		}
-
-		System.out.println("가격 정보를 삭제하시겠습니까? 1)예 2)아니오");
-		int no2 = scan.nextInt();
-		if(no2==1) {
-			System.out.println("가격 정보를 삭제합니다.");
-			drinks[num1-1].price = 0;
+		int drinkNo, idx;
+		while(true) {
+			drinkNo = scan.nextInt();
+			idx = drinkNo-1;
+			if( drinks[idx] != null) {
+				break;
+			}else {
+				System.out.println("잘못 입력하셨습니다. 삭제하실 음료의 번호를 입력하세요.");
+			}	
 		}
 		
-		System.out.println("수량 정보를 삭제하시겠습니까? 1)예 2)아니오");
-		int no3 = scan.nextInt();
-		if(no3==1) {
-			System.out.println("수량 정보를 삭제합니다.");
-			drinks[num1-1].quantity = 0;
+		System.out.println("정말 삭제하시겠습니까? 예:1 아니오:2");
+		while(true) {
+			int num = scan.nextInt();
+			if(num==1) {
+				drinks[idx] = null;
+				System.out.println("해당 상품이 삭제되었습니다.");
+				break;
+			}else if(num==2) {
+				System.out.println("삭제가 취소되었습니다.");
+				break;
+			}else {
+				System.out.println("잘못 입력하셨습니다. 삭제하시려면 숫자 1 아니면 2를 입력하세요.");				
+			}
 		}
 		
 	}

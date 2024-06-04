@@ -8,6 +8,10 @@ public class DrinkMain {
 		DrinkDTO[] drinks = new DrinkDTO[10];
 		drinks[0] = new DrinkDTO("콜라", 1000, 20);
 		drinks[1] = new DrinkDTO("코코팜", 1500, 10);
+		drinks[2] = new DrinkDTO("사이다", 2500, 7);
+		drinks[3] = new DrinkDTO("제로 콜라", 3300, 33);
+		drinks[4] = new DrinkDTO("칠성 사이다", 7777, 77);
+		drinks[5] = new DrinkDTO("밀크 쉐이크", 1234, 56);
 		
 		DrinkDAO insert = new DrinkInsertDAO(drinks, scan);
 		DrinkDAO list = new DrinkListDAO(drinks, scan);

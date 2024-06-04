@@ -15,12 +15,10 @@ public class DrinkListDAO extends DrinkManage implements DrinkDAO {
 
 	@Override
 	public void list() {
-		// ......]
-		int num = 0;
+		System.out.println("번호\t음료명");
+		int drinkNo=1;
 		for(DrinkDTO drink : drinks) {
-			if( drink == null) break;
-			num++;
-			System.out.println(num + " " + drink.name + " " + drink.price + " " + drink.quantity);
+			if(drink != null) System.out.println(drinkNo++ + "\t" + drink.name);
 		}
 	}
 
