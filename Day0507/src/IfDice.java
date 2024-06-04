@@ -10,7 +10,7 @@ public class IfDice {
 //		System.out.println( r.nextInt(100) ); //100(0~99)개의 수 중에 랜덤하게 추출됨
 		//1~6까지의 수 중 랜덤 추출
 		int user = r.nextInt(6) + 1; //0~5 +1 -> 1~6
-		int computer = r.nextInt(6); //0~5 +1 -> 1~6
+		int computer = r.nextInt(6) + 1; //0~5 +1 -> 1~6
 		System.out.printf( "사용자: %d, 컴: %d\n", user, computer );
 		
 		if( user > computer ) {
