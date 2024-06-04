@@ -22,7 +22,7 @@ public class IfDice {
 		else {
 			System.out.println("무승부");
 		}
-				
+		
 	}
 
 }
