@@ -3,6 +3,8 @@ package string;
 public class StringMain {
 
 	public static void main(String[] args) {
+		
+		//같은 문자열은 중복 생성되지 않는다
 		String text1 = "안녕";
 		String text2 = "안녕";
 		if(text1 == text2) {

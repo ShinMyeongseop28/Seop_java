@@ -5,11 +5,11 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-public class CalendarMain {
+public class CalendarMain extends Object {
 
 	public static void main(String[] args) {
 		// 날짜, 시각과 관련된 클래스: Calendar, GregorianCalendar
-		Calendar c;
+//		Calendar c;
 		GregorianCalendar gc = new GregorianCalendar();
 		int year = gc.get(Calendar.YEAR);
 		System.out.println(year);
@@ -30,16 +30,18 @@ public class CalendarMain {
 		
 		//날짜 지정하기
 		gc = new GregorianCalendar(2024, 10, 5);
-		gc = new GregorianCalendar(2024, 10, 5);
+		gc = new GregorianCalendar();
 		System.out.println(gc.get(Calendar.YEAR));
-		System.out.println(gc.get(Calendar.DAY_OF_WEEK));
-		// 일:0 .. 토:6
+		System.out.println(day(gc.get(Calendar.DAY_OF_WEEK)));
+		// 일:1 .. 토:7
 		
 		//날짜를 원하는 형태로 포맷시키기
 		Date now = gc.getTime(); //현재 날짜/시각정보
 		System.out.println(now);
 		
-		SimpleDateFormat sdf = new SimpleDateFormat("yy년 MM월 dd일 hh:mm:ss");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일 hh:mm:ss");
+		System.out.println(sdf.format(now));
+		
 		System.out.println(sdf.format(new Date()));
 	}
 	

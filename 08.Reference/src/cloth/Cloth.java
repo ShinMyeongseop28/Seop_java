@@ -20,7 +20,7 @@ public class Cloth {
 		content.append("\t의류명: ").append(name);
 		content.append("\t의류소재: ").append(material);
 		content.append("\t착용계절: ").append(season.getName());
-		return content.toString()
+		return content.toString();
 	}
 	
 	
