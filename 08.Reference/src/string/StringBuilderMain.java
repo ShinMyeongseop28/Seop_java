@@ -9,9 +9,9 @@ public class StringBuilderMain {
 		
 		StringBuilder script = new StringBuilder("<script>");
 		script.append("alert('평가는 잘 보셨나요?');") 
-					.append("location = 'http://www.naver.com'")
-					.append("</script>")
-					.toString();
+			  .append("location = 'http://www.naver.com'")
+			  .append("</script>")
+			  .toString();
 		
 		StringBuilder builder = new StringBuilder();
 		builder.append("혼자");

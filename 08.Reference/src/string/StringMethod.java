@@ -18,8 +18,8 @@ public class StringMethod {
 		//이메일 아이디만 출력하기
 		
 		String emails[] = { "dkrntm2714@naver.com",
-				"admin@hrd.go.kr",
-				"240604yo@gmail.com"
+							"admin@hrd.go.kr",
+							"240604yo@gmail.com"
 		};
 		
 		for(String email : emails) {

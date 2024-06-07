@@ -14,6 +14,8 @@ public class Cloth {
 //	static final int FALL = 3;
 //	static final int WINTER = 4;
 	
+	public Cloth(){}
+	
 	public String toString() {
 		StringBuffer content = new StringBuffer();
 		content.append("의류코드: ").append(code);
