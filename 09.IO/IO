@@ -1,0 +1,17 @@
+# IO(입출력)
+
+데이터를 입출력하는 단위: byte, 문자
+
+데이터가 흘러가는 형태: 스트림
+
+입력스트림: 외부데이터를 자바프로그램 안으로 가져오기 - InputStream, Reader
+
+출력스트림: 자바프로그램에서 외부로 내보내기 - OutputStream, Writer
+
+파일에의 입출력: FileInputstream / FileOutputStream
+
+                       FileReader / FileWriter
+
+메모장에 쓰기 : 메모장 열기 → 쓰기 → 메모장 닫기
+
+메모장 읽기 : 메모장 열기 → 읽기 → 메모장 닫기
