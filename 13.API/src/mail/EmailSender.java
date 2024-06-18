@@ -1,6 +1,7 @@
 package mail;
 
 import java.net.MalformedURLException;
+import java.net.URL;
 
 import org.apache.commons.mail.EmailAttachment;
 import org.apache.commons.mail.EmailException;
@@ -42,7 +43,7 @@ public class EmailSender {
 			mail.attach(file);
 			
 			file = new EmailAttachment();
-			file.setURL( new URL("https://imgnews.pstatic.net/image/094/2024/06/17/0000011851_001_20240617073511681.jpg?type=w647") );
+			file.setURL( new URL("https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1okkon.img?w=768&h=512&m=6&x=211&y=173&s=256&d=256") );
 			mail.attach(file);
 			mail.send(); //메일보내기버튼 클릭
 			

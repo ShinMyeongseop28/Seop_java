@@ -15,7 +15,8 @@ public class EmailSendMain {
 		scan.close();
 		
 		EmailSender sender = new EmailSender();
-		sender.sendMail(name, email);
+//		sender.sendMail(name, email);
+		sender.sendHtmlMail(name, email);
 		
 	}
 
