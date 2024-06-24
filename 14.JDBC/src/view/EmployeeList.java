@@ -27,7 +27,7 @@ public class EmployeeList {
 			View.info.display(scan.nextInt() );
 			break;
 		case 0:
-			System.err.println(0);
+			System.exit(0);
 		}
 		
 		PrintWriter out = null;
@@ -48,8 +48,9 @@ public class EmployeeList {
 			EmployeeDAO dao = new EmployeeDAO();
 			ArrayList<EmployeeDTO> list = dao.employeeList();
 			for(EmployeeDTO dto : list) {
-				out.printf("<tr><td>%s</td><td>%s</td>"
+				out.printf("<tr><td>%s</td><td><a href='employeeInfo_%s.html?id='>%s</a></td>"
 						+ "<td>%s</td><td>%s</td></tr>",
+						 dto.getEmployee_id(),
 						 dto.getEmployee_id(),
 						 dto.getName(),
 						 dto.getDepartment_id(),
