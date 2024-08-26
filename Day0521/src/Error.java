@@ -7,6 +7,7 @@ public class Error {
 		no2 = 2;
 		no = no1 / no2;
 		System.out.printf( "%d / %d = %d\n", no1, no2, no);
+		System.out.println("-----------------------------------");
 		
 		//문법적 오류는 아니나(컴파일은 정상적),
 		//프로그램 실행시 오류가 발생하는 경우: 프로그래밍적으로 해결한다
@@ -30,6 +31,7 @@ public class Error {
 		}finally {
 			System.out.println("Finished");
 		}
+		System.out.println("-----------------------------------");
 		
 		int datas[] = {10, 20, 30};
 		try {
@@ -39,6 +41,7 @@ public class Error {
 		}catch(java.lang.ArrayIndexOutOfBoundsException e) {
 			System.out.println(e.getMessage() + ": 인덱스 범위를 벗어남");
 		}
+		System.out.println("-----------------------------------");
 		
 		int[] values = {5, 4, 0, 3, 2, 1};
 		for(int i=0; i<10; i++) {
